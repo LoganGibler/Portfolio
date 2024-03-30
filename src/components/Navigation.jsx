@@ -10,7 +10,9 @@ const Navigation = ({ activeLink, setActiveLink }) => {
             window.scrollTo({ top: 0, behavior: "smooth" });
           }}
           className={`mx-2 ${
-            activeLink === "Home" ? "text-blue-500" : "text-black"
+            activeLink === "Home"
+              ? "text-blue-500 hover:cursor-pointer"
+              : "text-black hover:cursor-pointer"
           }`}
         >
           Home
@@ -21,7 +23,9 @@ const Navigation = ({ activeLink, setActiveLink }) => {
             window.scrollTo({ top: 520, behavior: "smooth" });
           }}
           className={`mx-2 ${
-            activeLink === "About" ? "text-blue-500" : "text-black"
+            activeLink === "About"
+              ? "text-blue-500 hover:cursor-pointer"
+              : "text-black hover:cursor-pointer"
           }`}
         >
           About
@@ -32,7 +36,9 @@ const Navigation = ({ activeLink, setActiveLink }) => {
             window.scrollTo({ top: 1360, behavior: "smooth" });
           }}
           className={`mx-2 ${
-            activeLink === "Projects" ? "text-blue-500" : "text-black"
+            activeLink === "Projects"
+              ? "text-blue-500 hover:cursor-pointer"
+              : "text-black hover:cursor-pointer"
           }`}
         >
           Projects
@@ -43,7 +49,9 @@ const Navigation = ({ activeLink, setActiveLink }) => {
             window.scrollTo({ top: 2270, behavior: "smooth" });
           }}
           className={`mx-2 ${
-            activeLink === "Skills" ? "text-blue-500" : "text-black"
+            activeLink === "Skills"
+              ? "text-blue-500 hover:cursor-pointer"
+              : "text-black hover:cursor-pointer"
           }`}
         >
           Skills
@@ -54,7 +62,9 @@ const Navigation = ({ activeLink, setActiveLink }) => {
             window.scrollTo({ top: 4000, behavior: "smooth" });
           }}
           className={`mx-2 ${
-            activeLink === "Contact" ? "text-blue-500" : "text-black"
+            activeLink === "Contact"
+              ? "text-blue-500 hover:cursor-pointer"
+              : "text-black hover:cursor-pointer"
           }`}
         >
           Contact
