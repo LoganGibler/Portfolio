@@ -29,19 +29,19 @@ const Projects = () => {
           </div>
 
           <div className="flex flex-col">
-            <p className="flex text-left p-0 mt-1">
+            <p className="flex text-left p-0 mt-3 px-1">
               This project is a full-stack application designed for small
               businesses using Google Workspace. It integrates MongoDB for the
               database, Node.js for the API, React with Tailwind CSS for the
               frontend, Firebase for uploading attachments, and Google's email
               API for notifications.
             </p>
-            <p className="flex mt-2 text-left p-0">
+            <p className="flex mt-2 text-left px-1">
               Key features include team dashboards, incident, service request,
               task, and change management with audit logs and comment systems
               for tracking activities and discussions.{" "}
             </p>
-            <div className="flex sm:mt-2">
+            <div className=" px-1 flex sm:mt-2">
               <a
                 className="mt-2 sm:mt-0 text-blue-400 underline"
                 href="https://pixelpulsects.netlify.app/"
@@ -67,16 +67,16 @@ const Projects = () => {
           </div>
 
           <div>
-            <p className="flex flex-col text-left p-0 mt-1">
+            <p className="flex flex-col text-left p-0 mt-3 px-1">
               Mock of Winn Dixies homepage, with improved UI/UX Design. Created
               using React.js, Tailwind CSS.
-              <span className="whitespace-nowrap mt-2">
+              <span className="whitespace-nowrap mt-2 px-0">
                 {" "}
                 Original: https://www.winndixie.com/
               </span>
             </p>
 
-            <div className="flex sm:mt-2">
+            <div className="flex sm:mt-2 px-1">
               <a
                 className="mt-2 sm:mt-0 text-blue-400 underline"
                 href="https://winndixiemock.netlify.app/ "
@@ -101,18 +101,18 @@ const Projects = () => {
           </div>
 
           <div className="">
-            <p className="flex text-left p-0 mt-1 sm:mt-0">
+            <p className="flex text-left px-1 mt-2 sm:mt-0">
               Users are able to create an account, post guides on vms and other
               topics, view other users posts, and like posts. Users can upload
               screenshots as well with their guides. Guides can be set to
               private/public, and users can search for guides by title,
               difficulty, or host.
             </p>
-            <p className="flex text-left p-0 mt-1">
+            <p className="flex text-left px-1 mt-1">
               All guides that are public are legitimate guides that I have
               published to the site.
             </p>
-            <div className="flex">
+            <div className="flex px-1">
               <a
                 className="mt-2 text-blue-400 underline"
                 href="https://webappwarfare.com"
