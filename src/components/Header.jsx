@@ -47,28 +47,12 @@ const Header = () => {
 
         <div className="flex flex-col justify-center mt-6">
           <p className="mt-5 text-base">
-            Passionate software engineer with expertise in Javascript and Java
-            frameworks. I thrive on turning ideas into reality through clean,
-            efficient code and solving real world problems. Let's build!
+            Passionate software engineer with expertise in Javascript, HTML/CSS,
+            React.js, Node.js, and MongoDB. I thrive on turning ideas into
+            reality through clean, efficient code and solving real world
+            problems. Let's build!
           </p>
         </div>
-        {/* <div
-          className="flex flex-col justify-center text-sm"
-          onClick={() => {
-            window.scrollTo({ top: 700, behavior: "smooth" });
-          }}
-        >
-          <div>
-            <button className="mt-10 border-2 rounded-md px-3 border-blue-500 text-white bg-blue-500">
-              View Education
-            </button>
-          </div>
-
-          <div className="flex justify-center">
-            {" "}
-            <FaArrowAltCircleDown className="mt-1 text-blue-500" />
-          </div>
-        </div> */}
       </div>
     </div>
   );

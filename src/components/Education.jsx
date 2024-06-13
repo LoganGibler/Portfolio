@@ -1,8 +1,18 @@
 import React from "react";
 import { PiGraduationCap } from "react-icons/pi";
 import { FaArrowAltCircleDown } from "react-icons/fa";
+import { useInView } from "react-intersection-observer";
 
 const Education = () => {
+  const { ref: ref1, inView: inView1 } = useInView({
+    triggerOnce: false,
+    threshold: 0.1,
+  });
+  const { ref: ref2, inView: inView2 } = useInView({
+    triggerOnce: false,
+    threshold: 0.1,
+  });
+
   return (
     <div className="flex flex-col fade-in-effect mt-[3rem]">
       <div className="slide-in-effect flex flex-col">
@@ -12,12 +22,17 @@ const Education = () => {
             <PiGraduationCap className="text-xl mr-2 mt-[1px]" />
           </div>
         </div>
-
-        <div className="flex flex-col text-sm px-2 mt-2 border-b-2 pb-7">
+        <div
+          ref={ref1}
+          className={`flex flex-col text-sm px-2 mt-2 border-b-2 pb-7 transition-all duration-700 ease-in-out ${
+            inView1
+              ? "transform translate-x-0 opacity-100"
+              : "transform translate-x-[-200px] opacity-0"
+          }`}
+        >
           <div className="flex">
             <p>Western Governors University</p>
             <div className="flex justify-end grow">
-              {" "}
               <p className="italic text-slate-400">Salt Lake City, Utah</p>
             </div>
           </div>
@@ -27,11 +42,10 @@ const Education = () => {
               <p className="text-slate-400">Expected: July 2025</p>
             </div>
           </div>
-
           <li className="text-sm mt-4">
             Studies focused on scripting, programming, web development, mobile
             application development, User experience design, software quality
-            assurance{" "}
+            assurance
           </li>
           <li className="text-sm mt-2">
             <span className="text-blue-500">Relevant courses-</span> Data
@@ -41,7 +55,14 @@ const Education = () => {
           </li>
         </div>
 
-        <div className="flex flex-col text-sm px-2 mt-[1rem] pb-3">
+        <div
+          ref={ref2}
+          className={`flex flex-col text-sm px-2 mt-2 border-b-2 pb-7 transition-all duration-700 ease-in-out ${
+            inView2
+              ? "transform translate-x-0 opacity-100"
+              : "transform translate-x-[200px] opacity-0"
+          }`}
+        >
           <div className="flex whitespace-nowrap">
             <p>UNF Fullstack WebDev Bootcamp</p>
           </div>
@@ -60,23 +81,6 @@ const Education = () => {
             React.js, PostgreSQL, Node.js, HTML/CSS, and jQuery.
           </li>
         </div>
-        {/* <div
-          className="flex flex-col justify-center mt-5 text-sm"
-          onClick={() => {
-            window.scrollTo({ top: 1400, behavior: "smooth" });
-          }}
-        >
-          <div>
-            <button className="mt-10 border-2 rounded-md px-3 border-blue-500 text-white bg-blue-500">
-              View Experience
-            </button>
-          </div>
-
-          <div className="flex justify-center">
-            {" "}
-            <FaArrowAltCircleDown className="mt-1 text-blue-500" />
-          </div>
-        </div> */}
       </div>
     </div>
   );

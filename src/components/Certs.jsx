@@ -31,24 +31,13 @@ const Certs = () => {
               June 2023 - exp: June 2026
             </div>
           </div>
+          <div className="flex mt-1">
+            <p className="whitespace-nowrap">AWS Cloud Practioner</p>
+            <div className="flex justify-end grow text-slate-400">
+              May 2024 - exp: May 2027
+            </div>
+          </div>
         </div>
-        {/* <div
-          className="flex flex-col justify-center text-sm mt-[4rem]"
-          onClick={() => {
-            window.scrollTo({ top: 2770, behavior: "smooth" });
-          }}
-        >
-          <div>
-            <button className="mt-10 border-2 rounded-md px-3 border-blue-500 text-white bg-blue-500">
-              Contact Me
-            </button>
-          </div>
-
-          <div className="flex justify-center">
-            {" "}
-            <FaArrowAltCircleDown className="mt-1 text-blue-500" />
-          </div>
-        </div> */}
       </div>
     </div>
   );

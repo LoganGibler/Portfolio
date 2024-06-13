@@ -3,10 +3,26 @@ import pixelpulsects from "../imgs/ppctsdash.png";
 import dixie from "../imgs/dixieheader.png";
 import WAWimage from "../imgs/WAWHeaderpage.png";
 import { FaCode } from "react-icons/fa6";
+import { useInView } from "react-intersection-observer";
 
 const Projects = () => {
+  const { ref: ref1, inView: inView1 } = useInView({
+    triggerOnce: false,
+    threshold: 0.1,
+  });
+
+  const { ref: ref2, inView: inView2 } = useInView({
+    triggerOnce: false,
+    threshold: 0.1,
+  });
+
+  const { ref: ref3, inView: inView3 } = useInView({
+    triggerOnce: false,
+    threshold: 0.1,
+  });
+
   return (
-    <div className="flex flex-col fade-in-effect text-sm mt-[3rem]">
+    <div className="flex flex-col text-sm mt-[3rem]">
       <div className="flex flex-col ">
         <div className="mt-10 flex pb-1 border-b-2 text-base border-blue-500 font-bold pl-2">
           Projects
@@ -14,18 +30,27 @@ const Projects = () => {
             <FaCode className="text-xl mr-2 mt-0.5" />
           </div>
         </div>
-        <div className="flex flex-col sm:flex-row mt-[2rem] sm:mt-[1rem] px-2 border-b-2 sm:border-b-0 pb-8">
+        <div
+          ref={ref1}
+          className={`flex flex-col sm:flex-row mt-[2rem] sm:mt-[1rem] px-2 border-b-2 sm:border-b-0 pb-8 transform-all duration-700 ease-in-out ${
+            inView1
+              ? "transform translate-x-0 opacity-100"
+              : "transform translate-x-[-200px] opacity-0"
+          }`}
+        >
           <div className="flex flex-col mr-0 sm:mr-5">
             <p className="flex text-sm font-semibold">
-              <span className="text-blue-500 ml-[4rem]">PixelPulseCTS</span> -
-              Ticketing Application
+              <span className="text-blue-500 ml-[4rem] mr-1">
+                PixelPulseCTS
+              </span>{" "}
+              - Ticketing Application
             </p>
-            <div>
+            <a className="" href="https://pixelpulsects.netlify.app/">
               <img
                 src={pixelpulsects}
-                className="mt-2 rounded-md border-2 shadow-md"
+                className="mt-2 rounded-md border-2 shadow-md hover:cursor-pointer"
               ></img>
-            </div>
+            </a>
           </div>
 
           <div className="flex flex-col">
@@ -53,17 +78,24 @@ const Projects = () => {
           </div>
         </div>
 
-        <div className="flex flex-col sm:flex-row-reverse mt-[2rem] p-2 border-b-2 sm:border-b-0 pb-8">
+        <div
+          ref={ref2}
+          className={`flex flex-col sm:flex-row-reverse mt-[2rem] p-2 border-b-2 sm:border-b-0 pb-8 transform-all duration-700 ease-in-out ${
+            inView2
+              ? "transform translate-x-0 opacity-100"
+              : "transform translate-x-[200px] opacity-0"
+          }`}
+        >
           <div className="flex flex-col sm:ml-3">
             <p className="font-semibold">
               <span className="text-blue-500">WinnDixie</span> - Mock E-commerce
             </p>
-            <div>
+            <a href="https://winndixiemock.netlify.app/">
               <img
                 src={dixie}
-                className="mt-2 sm:max-w-[350px] rounded-md border-2 shadow-md"
+                className="mt-2 sm:max-w-[350px] rounded-md border-2 shadow-md hover:cursor-pointer"
               ></img>
-            </div>
+            </a>
           </div>
 
           <div>
@@ -79,7 +111,7 @@ const Projects = () => {
             <div className="flex sm:mt-2 px-1">
               <a
                 className="mt-2 sm:mt-0 text-blue-400 underline"
-                href="https://winndixiemock.netlify.app/ "
+                href="https://winndixiemock.netlify.app/"
                 target="_blank"
               >
                 https://winndixiemock.netlify.app/
@@ -88,16 +120,24 @@ const Projects = () => {
           </div>
         </div>
 
-        <div className="flex flex-col sm:flex-row mt-[2rem] px-2 pb-5">
+        <div
+          className={`flex flex-col sm:flex-row mt-[2rem] px-2 pb-5 transform-all duration-700 ease-in-out ${
+            inView2
+              ? "transform translate-x-0 opacity-100"
+              : "transform translate-x-[-200px] opacity-0"
+          }`}
+        >
           <div className="sm:mr-4">
             <p className="font-semibold">
               <span className="text-blue-500">WebAppWarfare</span> - Guide/Blog
               Website
             </p>
-            <img
-              src={WAWimage}
-              className="mt-2 rounded-md border-2 shadow-md"
-            ></img>
+            <a href="https://webappwarfare.com">
+              <img
+                src={WAWimage}
+                className="mt-2 rounded-md border-2 shadow-md"
+              ></img>
+            </a>
           </div>
 
           <div className="">

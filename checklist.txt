@@ -1,0 +1,8 @@
+DONE 1. hyperlinks on click on the project images. 
+DONE 2. Change description to "expertise in frontend web technologies"
+DONE 3. education section should probably slide up into view.
+WORKING 4. Each section in experience should slide in horizontally, in opposite directions.
+WORKING 5. same with each section in projects.
+DONE 6. skills should maybe just slide in? or maybe stay static.
+7. Add AWS Certified Cloud Practitioner badge to the skills section.
+8. eventually add Project+ as soon as achieved.
