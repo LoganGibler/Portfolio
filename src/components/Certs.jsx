@@ -37,6 +37,18 @@ const Certs = () => {
               May 2024 - exp: May 2027
             </div>
           </div>
+          <div className="flex mt-1">
+            <p className="whitespace-nowrap">CompTIA Project+</p>
+            <div className="flex justify-end grow text-slate-400">
+              June 2024 - exp: Never
+            </div>
+          </div>
+          <div className="flex mt-1">
+            <p className="whitespace-nowrap">Axelos ITIL Foundations</p>
+            <div className="flex justify-end grow text-slate-400">
+              June 2024 - exp: Never
+            </div>
+          </div>
         </div>
       </div>
     </div>
