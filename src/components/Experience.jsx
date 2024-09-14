@@ -33,27 +33,51 @@ const Experience = () => {
             }`}
           >
             <div className="flex mt-2">
-              <p>IT Datacenter Technician</p>
+              <p>IT Datacenter Technician II</p>
               <div className="flex justify-end grow">
                 <p className="italic text-slate-400">Southeastern Grocers</p>
               </div>
             </div>
             <div className="flex justify-start text-sm text-slate-400">
-              <p className="text-blue-400">Jan 2023 - current</p>
+              <p className="text-blue-400">January 2023 - current</p>
               <div className="flex justify-end grow">
                 <p>Jacksonville, FL</p>
               </div>
             </div>
-            <li className="text-sm mt-1">
-              Created scripts to automate tasks for retail support team and
-              other datacenter technicians on the team{" "}
-            </li>
-            <li className="text-sm mt-0.5 pb-8 border-b-2">
-              Implemented the migration of technicians and the retail support
-              team to our latest information-sharing platform, with the dual
-              objectives of resolving knowledge gaps and facilitating a smoother
-              onboarding experience for new associates.{" "}
-            </li>
+            <ul className="list-disc pl-10 pr-5 mt-2">
+              <li className="px-1 py-0.5">
+                Created scripts to automate tasks for retail support team and
+                other datacenter technicians on the team{" "}
+              </li>
+              <li className="px-1 py-0.5">
+                Implemented the migration of technicians and the retail support
+                team to our latest information-sharing platform, with the dual
+                objectives of resolving knowledge gaps and facilitating a
+                smoother onboarding experience for new associates.{" "}
+              </li>
+              <li className="px-1 py-0.5">
+                Participated in a comprehensive disaster recovery simulation as
+                part of the Business Continuity Plan (BCP) initiative,
+                collaborating with cross-functional teams to test recovery
+                procedures and ensure the integrity and resilience of critical
+                systems and services.
+              </li>
+              <li className="px-1 py-0.5">
+                Monitor store and corporate networks, servers, databases,
+                applications, and scheduled jobs to ensure execution and optimal
+                performance
+              </li>
+              <li className="px-1 py-0.5">
+                Orchestrate IT processes and workloads for onsite and cloud
+                environments
+              </li>
+            </ul>
+            <p className="mt-5">
+              <span className="text-blue-400">Job Skills: </span> Automation,
+              Azure/AzureDevOps, Stonebranch, Python Scripting, SolarWinds,
+              VMware, Kubernetes, AxwayB2BI, Active Directory management, Change
+              Management, Dynatrace, MQAttach
+            </p>
           </div>
 
           <div
@@ -64,7 +88,7 @@ const Experience = () => {
                 : "transform translate-x-[200px] opacity-0"
             }`}
           >
-            <div className="flex mt-3">
+            <div className="flex mt-10">
               <p>Customer Service Associate</p>
               <div className="flex justify-end grow">
                 <p className="italic text-slate-400">Winn-Dixie</p>
@@ -76,15 +100,17 @@ const Experience = () => {
                 <p>Jacksonville, FL</p>
               </div>
             </div>
-            <li className="text-sm mt-1">
-              Provided exceptional customer service by greeting customers,
-              assisting with inquiries, and resolving issues promptly and
-              professionally.
-            </li>
-            <li className="text-sm mt-0.5">
-              Received positive feedback from customers and supervisors for
-              outstanding service and attention to detail.
-            </li>
+            <ul className="list-disc pl-10 pr-5 mt-2">
+              <li className="text-sm mt-1">
+                Provided exceptional customer service by greeting customers,
+                assisting with inquiries, and resolving issues promptly and
+                professionally.
+              </li>
+              <li className="text-sm mt-0.5">
+                Received positive feedback from customers and supervisors for
+                outstanding service and attention to detail.
+              </li>
+            </ul>
           </div>
         </div>
         {/* <div

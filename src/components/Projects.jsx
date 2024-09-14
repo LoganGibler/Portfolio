@@ -22,7 +22,7 @@ const Projects = () => {
   });
 
   return (
-    <div className="flex flex-col text-sm mt-[3rem]">
+    <div className="flex flex-col text-sm mt-[1rem]">
       <div className="flex flex-col ">
         <div className="mt-10 flex pb-1 border-b-2 text-base border-blue-500 font-bold pl-2">
           Projects
@@ -88,7 +88,8 @@ const Projects = () => {
         >
           <div className="flex flex-col sm:ml-3">
             <p className="font-semibold">
-              <span className="text-blue-500">WinnDixie</span> - Mock E-commerce
+              <span className="text-blue-500">WinnDixie</span> - Mock E-Commerce
+              Site
             </p>
             <a href="https://winndixiemock.netlify.app/">
               <img
@@ -100,15 +101,14 @@ const Projects = () => {
 
           <div>
             <p className="flex flex-col text-left p-0 mt-3 px-1">
-              Mock of Winn Dixies homepage, with improved UI/UX Design. Created
-              using React.js, Tailwind CSS.
-              <span className="whitespace-nowrap mt-2 px-0">
-                {" "}
-                Original: https://www.winndixie.com/
-              </span>
+              Mock of Winn Dixies homepage, with improved UI/UX Design. Rebuilt
+              websites homepage using React.js and Tailwind CSS, significantly
+              improving UI/UX with modern, responsive design principles.
+              Developed reusable React components to streamline development and
+              ensure scalability for future updates
             </p>
 
-            <div className="flex sm:mt-2 px-1">
+            <div className="flex flex-col sm:mt-2 px-1">
               <a
                 className="mt-2 sm:mt-0 text-blue-400 underline"
                 href="https://winndixiemock.netlify.app/"
@@ -116,6 +116,16 @@ const Projects = () => {
               >
                 https://winndixiemock.netlify.app/
               </a>
+              <span className="whitespace-nowrap mt-2 px-0">
+                {" "}
+                Original:{" "}
+                <a
+                  href="https://www.winndixie.com/"
+                  className="text-blue-400 underline"
+                >
+                  https://www.winndixie.com/
+                </a>
+              </span>
             </div>
           </div>
         </div>

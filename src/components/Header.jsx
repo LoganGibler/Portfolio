@@ -13,7 +13,7 @@ const Header = () => {
         <div className="flex justify-center">
           <img src={selfie} className="rounded-full w-[190px] shadow-xl"></img>
         </div>
-        <p className="font-semibold text-lg mt-7">
+        <p className="font-semibold text-lg mt-7 text-center">
           <span className="text-blue-500">Hey! </span>I'm Logan.
         </p>
         <div className="flex flex-wrap grow justify-center mt-[2rem] text-stone-600">
@@ -46,7 +46,7 @@ const Header = () => {
         </div>
 
         <div className="flex flex-col justify-center mt-6">
-          <p className="mt-5 text-base">
+          <p className="mt-5 text-base text-center">
             Passionate software engineer with expertise in Javascript, HTML/CSS,
             React.js, Node.js, and MongoDB. I thrive on turning ideas into
             reality through clean, efficient code and solving real world

@@ -24,7 +24,7 @@ const Education = () => {
         </div>
         <div
           ref={ref1}
-          className={`flex flex-col text-sm px-2 mt-2 border-b-2 pb-7 transition-all duration-700 ease-in-out ${
+          className={`flex flex-col text-sm px-2 mt-2 pb-7 transition-all duration-700 ease-in-out ${
             inView1
               ? "transform translate-x-0 opacity-100"
               : "transform translate-x-[-200px] opacity-0"
@@ -39,7 +39,7 @@ const Education = () => {
           <div className="flex text-sm">
             <p className="text-blue-400">B.S in Software Engineering</p>
             <div className="flex justify-end grow">
-              <p className="text-slate-400">Expected: July 2025</p>
+              <p className="text-slate-400">Expected: April 2025</p>
             </div>
           </div>
           <li className="text-sm mt-4">
@@ -57,7 +57,7 @@ const Education = () => {
 
         <div
           ref={ref2}
-          className={`flex flex-col text-sm px-2 mt-2 border-b-2 pb-7 transition-all duration-700 ease-in-out ${
+          className={`flex flex-col text-sm px-2 mt-2 pb-7 transition-all duration-700 ease-in-out ${
             inView2
               ? "transform translate-x-0 opacity-100"
               : "transform translate-x-[200px] opacity-0"
