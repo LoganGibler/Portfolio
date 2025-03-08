@@ -2,6 +2,7 @@ import React from "react";
 import { GrUserExpert } from "react-icons/gr";
 import { FaArrowAltCircleDown } from "react-icons/fa";
 import { useInView } from "react-intersection-observer";
+import logo from "../imgs/winndixielogo.webp";
 
 const Experience = () => {
   const { ref: ref1, inView: inView1 } = useInView({
@@ -33,9 +34,10 @@ const Experience = () => {
             }`}
           >
             <div className="flex mt-2">
-              <p>IT Datacenter Technician II</p>
+              <p>IT Datacenter Operator II</p>
               <div className="flex justify-end grow">
-                <p className="italic text-slate-400">Southeastern Grocers</p>
+                <p className="italic text-slate-400">Winn Dixie</p>
+                <img className="h-[20px] w-[20px] rounded-xl ml-1" src={logo}></img>
               </div>
             </div>
             <div className="flex justify-start text-sm text-slate-400">
@@ -46,30 +48,35 @@ const Experience = () => {
             </div>
             <ul className="list-disc pl-10 pr-5 mt-2">
               <li className="px-1 py-0.5">
-                Created scripts to automate tasks for retail support team and
-                other datacenter technicians on the team{" "}
+                Developed Python automation scripts to streamline
+                troubleshooting and recovery processes, reducing manual
+                intervention for Kubernetes container rebuilds and file transfer
+                issues.
               </li>
               <li className="px-1 py-0.5">
-                Implemented the migration of technicians and the retail support
-                team to our latest information-sharing platform, with the dual
-                objectives of resolving knowledge gaps and facilitating a
-                smoother onboarding experience for new associates.{" "}
+                Monitored and maintained enterprise production environments
+                using Azure, Dynatrace, and IR360 ensuring high availability and
+                performance of critical applications, databases, and store-level
+                infrastructure.
               </li>
               <li className="px-1 py-0.5">
-                Participated in a comprehensive disaster recovery simulation as
-                part of the Business Continuity Plan (BCP) initiative,
-                collaborating with cross-functional teams to test recovery
-                procedures and ensure the integrity and resilience of critical
-                systems and services.
+                Managed and troubleshot Stonebranch job scheduling workflows,
+                optimizing job execution and resolving failures to maintain
+                smooth operations across 300+ store servers
               </li>
               <li className="px-1 py-0.5">
-                Monitor store and corporate networks, servers, databases,
-                applications, and scheduled jobs to ensure execution and optimal
-                performance
+                Diagnosed and resolved software issues affecting containerized
+                applications (Kubernetes, Rancher) and file transfer systems
+                (FTE/FTP) to minimize downtime and improve system reliability
               </li>
               <li className="px-1 py-0.5">
-                Orchestrate IT processes and workloads for onsite and cloud
-                environments
+                Collaborated with software engineers and IT leadership to
+                communicate incident status and resolutions, providing technical
+                insights and ensuring transparency with key stakeholders.
+              </li>
+              <li>
+                Participated in disaster recovery simulations to validate
+                business continuity plans and enhance system resiliency
               </li>
             </ul>
             <p className="mt-5">

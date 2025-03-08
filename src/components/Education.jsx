@@ -39,7 +39,7 @@ const Education = () => {
           <div className="flex text-sm">
             <p className="text-blue-400">B.S in Software Engineering</p>
             <div className="flex justify-end grow">
-              <p className="text-slate-400">Expected: April 2025</p>
+              <p className="text-slate-400">Expected: October 2025</p>
             </div>
           </div>
           <li className="text-sm mt-4">
