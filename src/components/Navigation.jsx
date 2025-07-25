@@ -19,21 +19,34 @@ const Navigation = ({ activeLink, setActiveLink }) => {
         </p>
         <p
           onClick={() => {
-            setActiveLink("About");
-            window.scrollTo({ top: 520, behavior: "smooth" });
+            setActiveLink("Education");
+            window.scrollTo({ top: 400, behavior: "smooth" });
           }}
           className={`mx-2 ${
-            activeLink === "About"
+            activeLink === "Education"
               ? "text-blue-500 hover:cursor-pointer"
               : "text-black hover:cursor-pointer"
           }`}
         >
-          About
+          Education
+        </p>
+        <p
+          onClick={() => {
+            setActiveLink("Experience");
+            window.scrollTo({ top: 820, behavior: "smooth" });
+          }}
+          className={`mx-2 ${
+            activeLink === "Experience"
+              ? "text-blue-500 hover:cursor-pointer"
+              : "text-black hover:cursor-pointer"
+          }`}
+        >
+          Experience
         </p>
         <p
           onClick={() => {
             setActiveLink("Projects");
-            window.scrollTo({ top: 1360, behavior: "smooth" });
+            window.scrollTo({ top: 1500, behavior: "smooth" });
           }}
           className={`mx-2 ${
             activeLink === "Projects"
@@ -46,7 +59,7 @@ const Navigation = ({ activeLink, setActiveLink }) => {
         <p
           onClick={() => {
             setActiveLink("Skills");
-            window.scrollTo({ top: 2270, behavior: "smooth" });
+            window.scrollTo({ top: 2400, behavior: "smooth" });
           }}
           className={`mx-2 ${
             activeLink === "Skills"

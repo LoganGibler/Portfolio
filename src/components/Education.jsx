@@ -14,7 +14,7 @@ const Education = () => {
   });
 
   return (
-    <div className="flex flex-col fade-in-effect mt-[3rem]">
+    <div className="flex flex-col fade-in-effect mt-[1rem]">
       <div className="slide-in-effect flex flex-col">
         <div className="mt-1 flex text-base grow pl-2 pb-1 border-b-2 border-blue-500 font-bold">
           Education

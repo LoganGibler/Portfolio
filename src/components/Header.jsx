@@ -45,14 +45,14 @@ const Header = () => {
           </div>
         </div>
 
-        <div className="flex flex-col justify-center mt-6">
+        {/* <div className="flex flex-col justify-center mt-6">
           <p className="mt-5 text-base text-center">
             Passionate software engineer with expertise in Javascript, HTML/CSS,
             React.js, Node.js, and MongoDB. I thrive on turning ideas into
             reality through clean, efficient code and solving real world
             problems. Let's build!
           </p>
-        </div>
+        </div> */}
       </div>
     </div>
   );
