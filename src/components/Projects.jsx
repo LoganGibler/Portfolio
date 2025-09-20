@@ -2,6 +2,7 @@ import React from "react";
 import pixelpulsects from "../imgs/ppctsdash.png";
 import dixie from "../imgs/dixieheader.png";
 import WAWimage from "../imgs/WAWHeaderpage.png";
+import surfsightImg from "../imgs/surfsightfrontpage.png";
 import { FaCode } from "react-icons/fa6";
 import { useInView } from "react-intersection-observer";
 
@@ -30,6 +31,59 @@ const Projects = () => {
             <FaCode className="text-xl mr-2 mt-0.5" />
           </div>
         </div>
+
+        <div
+          ref={ref1}
+          className={`flex flex-col sm:flex-row mt-[2rem] sm:mt-[1rem] px-2 border-b-2 sm:border-b-0 pb-8 transform-all duration-700 ease-in-out ${
+            inView1
+              ? "transform translate-x-0 opacity-100"
+              : "transform translate-x-[-200px] opacity-0"
+          }`}
+        >
+          <div className="flex flex-col mr-0 sm:mr-5">
+            <p className="flex text-sm font-semibold">
+              <span className="text-blue-500 ml-[4rem] mr-1">
+                PixelPulseCTS
+              </span>{" "}
+              - Ticketing Application
+            </p>
+            <a
+              className=""
+              href="https://d424-software-engineering-capstone-oe2a.onrender.com/"
+            >
+              <img
+                src={surfsightImg}
+                className="mt-2 rounded-md border-2 shadow-md hover:cursor-pointer"
+              ></img>
+            </a>
+          </div>
+
+          <div className="flex flex-col">
+            <p className="flex text-left p-0 mt-3 px-1">
+              Capstone project for my B.S Software Engineering degree. This
+              project is a full stack web application meant for forcasting surf
+              conditions. It leverages openMeteo's open source API to gather
+              weather data, then feeds the data to an algorithm that scores surf
+              conditions based on wave height, wind speed, and wind direction.
+              Tech stack includes Typescript + React, Tailwind CSS,
+              Java/Springboot, and PostgreSQL.
+            </p>
+            <p className="flex mt-2 text-left px-1">
+              Users can create accounts, save favorite surf spots, and view surf
+              forecasts for those spots anywhere around the world.
+            </p>
+            <div className=" px-1 flex sm:mt-2">
+              <a
+                className="mt-2 sm:mt-0 text-blue-400 underline"
+                href="https://d424-software-engineering-capstone-oe2a.onrender.com/"
+                target="_blank"
+              >
+                https://d424-software-engineering-capstone-oe2a.onrender.com/
+              </a>
+            </div>
+          </div>
+        </div>
+
         <div
           ref={ref1}
           className={`flex flex-col sm:flex-row mt-[2rem] sm:mt-[1rem] px-2 border-b-2 sm:border-b-0 pb-8 transform-all duration-700 ease-in-out ${
