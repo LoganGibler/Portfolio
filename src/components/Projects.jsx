@@ -43,9 +43,9 @@ const Projects = () => {
           <div className="flex flex-col mr-0 sm:mr-5">
             <p className="flex text-sm font-semibold">
               <span className="text-blue-500 ml-[4rem] mr-1">
-                PixelPulseCTS
+                SurfSight
               </span>{" "}
-              - Ticketing Application
+              - Surf Forecast Web Application
             </p>
             <a
               className=""
