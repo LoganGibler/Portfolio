@@ -41,7 +41,28 @@ const About = () => {
             <GiSkills className="text-xl mr-2 mt-0.5" />
           </div>
         </div>
-        <BulletPoint>
+        <div className="mx-2 mt-2">
+          <li>
+            <b>Operating Systems:</b> Windows Server, Linux(k3OS), IBM z/OS
+            Mainframe
+          </li>
+          <li>
+            <b>Cloud & DevOps:</b> Azure alerts/metrics, Azure DevOps,
+            Kubernetes, Docker, Render, Netlify
+          </li>
+          <li>
+            <b>Tools & Applications: </b> Stonebranch, Dynatrace, Azure Portal,
+            VMware vSphere, Infrared360, AD Manager+, AirWatch, Orion
+            SolarWinds, Ticketing System (Ivanti), MQAttach, B2BI Axway,
+            Powershell Universal, Thycotic Secret Server, Riverbed, ISPF
+          </li>
+          <li>
+            <b>Programming & Data:</b> Python, Javascript, Java, SQL, JCL,
+            HTML/CSS
+          </li>
+        </div>
+
+        {/* <BulletPoint>
           <div className="flex grow mb-1 mt-3 px-2">
             <p>Javascript</p>
             <div className="flex justify-end grow">
@@ -123,7 +144,7 @@ const About = () => {
               <FaNodeJs className="text-2xl" />
             </div>
           </div>
-        </BulletPoint>
+        </BulletPoint> */}
       </div>
     </div>
   );

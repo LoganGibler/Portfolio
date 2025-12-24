@@ -94,40 +94,47 @@ const Experience = () => {
             </div>
             <ul className="list-disc pl-10 pr-5 mt-2">
               <li className="px-1 py-0.5">
-                Developed Python automation scripts to streamline
-                troubleshooting and recovery processes, reducing manual
-                intervention for Kubernetes container rebuilds and file transfer
-                issues.
+                My IT Operations team provides 24/7 support for enterprise
+                systems, ensuring uptime and reliability of mission-critical
+                processes and infrastructure.
               </li>
               <li className="px-1 py-0.5">
-                Deployed 1000+ monitoring alerts to CCs, DDs, and store servers,
-                improving incident response to outages and enhancing operational
-                efficiency.
+                Monitor, troubleshoot, escalate and resolve failures in
+                Stonebranch job scheduling, supporting 20,000+ daily processes
+                that drive POS, pricing, file transfers, merchandising, supply
+                chain, and store operations.
               </li>
               <li className="px-1 py-0.5">
-                Monitored and maintained enterprise production environments
-                using Azure, Dynatrace, and IR360 ensuring high availability and
-                performance of critical applications, databases, and store-level
-                infrastructure.
+                Investigate job failures, identify root cause, re-run workflows
+                when appropriate, and create/route incident tickets to
+                engineering teams for escalation when code, data, or
+                infrastructure issues are detected.
               </li>
               <li className="px-1 py-0.5">
-                Managed and troubleshot Stonebranch job scheduling workflows,
-                optimizing job execution and resolving failures to maintain
-                smooth operations.
+                Create, optimize, and respond to alerts from Dynatrace, Azure
+                Monitor, IR360, and internal monitoring systems to ensure uptime
+                of enterprise applications including websites, APIs, function
+                apps, databases, and backend services.
               </li>
               <li className="px-1 py-0.5">
-                Diagnosed and resolved software issues affecting containerized
-                applications (Kubernetes, Rancher) and file transfer systems
-                (FTE/FTP) to minimize downtime and improve system reliability.
+                Utilize log analysis and system utilities to validate service
+                availability and support troubleshooting efforts
               </li>
               <li>
-                Collaborated with software engineers and IT leadership to
-                communicate incident status and resolutions, providing technical
-                insights and ensuring transparency with key stakeholders.
+                Develop Python automation tools to recover FTE/file-transfer
+                jobs, troubleshoot Kubernetes-hosted store containers, and
+                accelerate remediation of infrastructure issues across 300+
+                store environments.
               </li>
               <li>
-                Participated in disaster recovery simulations to validate
-                business continuity plans and enhance system resiliency.
+                Participate in disaster recovery exercises, validating system
+                recoverability and ensuring business continuity for retail
+                operations.
+              </li>
+              <li>
+                Document procedures, incident resolutions, and repeatable fixes
+                to improve team knowledge and reduce time-to-resolution on
+                recurring issues.
               </li>
             </ul>
             {/* <p className="mt-5">
