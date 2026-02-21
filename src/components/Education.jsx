@@ -31,7 +31,7 @@ const Education = () => {
           }`}
         >
           <div className="flex">
-            <p>Western Governors University</p>
+            <p className=" font-semibold">Western Governors University</p>
             <div className="flex justify-end grow">
               <p className="italic text-slate-400">Salt Lake City, Utah</p>
             </div>
@@ -39,7 +39,7 @@ const Education = () => {
           <div className="flex text-sm">
             <p className="text-blue-400">B.S in Software Engineering</p>
             <div className="flex justify-end grow">
-              <p className="text-slate-400">Expected: October 2025</p>
+              <p className="text-slate-400">October 2025</p>
             </div>
           </div>
           <li className="text-sm mt-4">
@@ -63,22 +63,21 @@ const Education = () => {
               : "transform translate-x-[200px] opacity-0"
           }`}
         >
-          <div className="flex whitespace-nowrap">
-            <p>UNF Fullstack WebDev Bootcamp</p>
+          <div className="flex whitespace-nowrap font-semibold">
+            <p>Fullstack Academy Cybersecurity Bootcamp</p>
           </div>
           <div className="flex whitespace-nowrap text-sm">
-            <p className="text-blue-400">WebDev Certificate, UNF</p>
+            <p className="text-blue-400">Cybersecurity Certificate, UNF</p>
             <div className="flex justify-end grow">
               <p className="text-slate-400">Jan 2022 - July 2022</p>
             </div>
           </div>
           <li className="text-sm mt-2">
-            Rigorous coding bootcamp with a focus on fullstack development.
-          </li>
-          <li className="text-sm mt-1">
-            The program emphasized pair programming in an agile environment,
-            providing hands-on experience with industry standard tools such as
-            React.js, PostgreSQL, Node.js, HTML/CSS, and jQuery.
+            Throughout the program, I upskilled in industry-leading tools,
+            techniques, and procedures, including Log Analysis, Reconnaissance,
+            IPS/IDS, Packet Analysis, Python/Bash Scripting, Exploitation,
+            Indicators of Compromise, Detection and Response, NIST Framework,
+            MITRE ATT&CK Framework, and Reporting.
           </li>
         </div>
       </div>

@@ -3,6 +3,7 @@ import { GrUserExpert } from "react-icons/gr";
 import { FaArrowAltCircleDown } from "react-icons/fa";
 import { useInView } from "react-intersection-observer";
 import logo from "../imgs/winndixielogo.webp";
+import tcslogo from "../imgs/TCS.png";
 
 const Experience = () => {
   const { ref: ref1, inView: inView1 } = useInView({
@@ -33,50 +34,41 @@ const Experience = () => {
                 : "transform translate-x-[-200px] opacity-0"
             }`}
           >
-            <div className="flex mt-4">
-              <p className="font-semibold">
-                IBM Global Accelerator Apprenticeship MSA Program
-              </p>
+            <div className="flex mt-1">
+              <p className="font-semibold">Systems Support Engineer</p>
               <div className="flex justify-end grow">
-                <p className="italic text-slate-400">IBM | Winn Dixie</p>
+                <p className="italic text-slate-400">
+                  Tata Consultancy Services
+                </p>
                 <img
                   className="h-[20px] w-[20px] rounded-xl ml-1"
-                  src={logo}
+                  src={tcslogo}
                 ></img>
               </div>
             </div>
             <div className="flex justify-start text-sm text-slate-400">
-              <p className="text-blue-400"> January 2025 - December 2025</p>
+              <p className="text-blue-400"> February 6 - current</p>
               <div className="flex justify-end grow">
                 <p>Jacksonville, FL</p>
               </div>
             </div>
             <ul className="list-disc pl-10 pr-5 mt-2">
               <li className="text-sm mt-1">
-                Mainframe system administrator apprenticeship program taught by
-                IBM subject matter experts.
+                Provided enterprise IT operations support for The Winn-Dixie
+                Company (TWDC).
               </li>
               <li className="text-sm mt-0.5">
-                Gained hands-on experience operating and maintaining
-                Winn-Dixie’s z/OS mainframe environment.
+                Transitioned from in-house TWDC IT to TCS managed services
+                model.
               </li>
               <li className="text-sm mt-0.5">
-                Wrote and executed JCL, navigated the mainframe using ISPF, and
-                managed datasets and utilities.
-              </li>
-              <li className="text-sm mt-0.5">
-                Troubleshot failed batch jobs and performed scheduled
-                maintenance on mainframe applications and services.
-              </li>
-              <li className="text-sm mt-0.5">
-                Conducted identity and access management (IAM) tasks using RACF.
-              </li>
-              <li className="text-sm mt-0.5">
-                Monitored system performance and job execution via OMEGAMON.
+                Leading ongoing knowledge transfer to train offshore IT
+                Operations team on processes, monitoring, incident response
+                procedures, and all other day-to-day duties.
               </li>
             </ul>
 
-            <div className="flex mt-6">
+            <div className="flex mt-4">
               <p className="font-semibold">IT Datacenter Operator II</p>
               <div className="flex justify-end grow">
                 <p className="italic text-slate-400">Winn Dixie</p>
@@ -87,7 +79,7 @@ const Experience = () => {
               </div>
             </div>
             <div className="flex justify-start text-sm text-slate-400">
-              <p className="text-blue-400">January 2023 - current</p>
+              <p className="text-blue-400">January 2023 - February 2026</p>
               <div className="flex justify-end grow">
                 <p>Jacksonville, FL</p>
               </div>
@@ -100,7 +92,7 @@ const Experience = () => {
               </li>
               <li className="px-1 py-0.5">
                 Monitor, troubleshoot, escalate and resolve failures in
-                Stonebranch job scheduling, supporting 20,000+ daily processes
+                Stonebranch job scheduling, supporting 15,000+ daily processes
                 that drive POS, pricing, file transfers, merchandising, supply
                 chain, and store operations.
               </li>
@@ -135,6 +127,46 @@ const Experience = () => {
                 Document procedures, incident resolutions, and repeatable fixes
                 to improve team knowledge and reduce time-to-resolution on
                 recurring issues.
+              </li>
+            </ul>
+
+            <div className="flex mt-4">
+              <p className="font-semibold">
+                IBM Global Accelerator Apprenticeship MSA Program
+              </p>
+              <div className="flex justify-end grow">
+                <p className="italic text-slate-400">IBM | Winn Dixie</p>
+                <img
+                  className="h-[20px] w-[20px] rounded-xl ml-1"
+                  src={logo}
+                ></img>
+              </div>
+            </div>
+            <div className="flex justify-start text-sm text-slate-400">
+              <p className="text-blue-400"> January 2025 - January 2026</p>
+              <div className="flex justify-end grow">
+                <p>Jacksonville, FL</p>
+              </div>
+            </div>
+            <ul className="list-disc pl-10 pr-5 mt-2">
+              <li className="text-sm mt-1">
+                Mainframe system administrator apprenticeship program taught by
+                IBM subject matter experts.
+              </li>
+              <li className="text-sm mt-0.5">
+                Gained hands-on experience operating and maintaining
+                Winn-Dixie’s z/OS mainframe environment.
+              </li>
+              <li className="text-sm mt-0.5">
+                Wrote and executed JCL, navigated the mainframe using ISPF, and
+                managed datasets and utilities.
+              </li>
+              <li className="text-sm mt-0.5">
+                Troubleshot and resolved countless failed batch jobs.
+              </li>
+              <li className="text-sm mt-0.5">
+                Conducted identity and access management (IAM) tasks using TSO
+                commands.
               </li>
             </ul>
             {/* <p className="mt-5">
