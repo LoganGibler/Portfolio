@@ -47,7 +47,7 @@ const Experience = () => {
               </div>
             </div>
             <div className="flex justify-start text-sm text-slate-400">
-              <p className="text-blue-400"> February 6 - current</p>
+              <p className="text-blue-400"> February 2026 - current</p>
               <div className="flex justify-end grow">
                 <p>Jacksonville, FL</p>
               </div>
