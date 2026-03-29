@@ -1,219 +1,146 @@
 import React from "react";
 import { GrUserExpert } from "react-icons/gr";
-import { FaArrowAltCircleDown } from "react-icons/fa";
 import { useInView } from "react-intersection-observer";
 import logo from "../imgs/winndixielogo.webp";
 import tcslogo from "../imgs/TCS.png";
 
-const Experience = () => {
-  const { ref: ref1, inView: inView1 } = useInView({
-    triggerOnce: false,
-    threshold: 0.1,
-  });
-
-  const { ref: ref2, inView: inView2 } = useInView({
-    triggerOnce: false,
-    threshold: 0.1,
-  });
+const JobEntry = ({ title, company, logo: logoSrc, date, location, children }) => {
+  const { ref, inView } = useInView({ triggerOnce: false, threshold: 0.1 });
   return (
-    <div className="flex slide-in-effect text-sm mt-[2rem]">
+    <div
+      ref={ref}
+      className={`mt-5 pl-3 border-l-2 border-blue-100 transition-all duration-700 ease-in-out ${
+        inView
+          ? "transform translate-x-0 opacity-100"
+          : "transform translate-x-[-200px] opacity-0"
+      }`}
+    >
+      <div className="flex items-center justify-between flex-wrap gap-1">
+        <p className="font-semibold text-gray-800 text-sm">{title}</p>
+        <div className="flex items-center gap-1.5">
+          <p className="italic text-slate-400 text-xs">{company}</p>
+          {logoSrc && (
+            <img className="h-[18px] w-[18px] rounded object-contain" src={logoSrc} alt={company} />
+          )}
+        </div>
+      </div>
+      <div className="flex items-baseline justify-between flex-wrap gap-1 mt-0.5">
+        <p className="text-blue-400 text-xs font-medium">{date}</p>
+        <p className="text-slate-400 text-xs">{location}</p>
+      </div>
+      <ul className="list-disc pl-5 mt-2.5 space-y-1.5 text-xs text-gray-600">
+        {children}
+      </ul>
+    </div>
+  );
+};
+
+const Experience = () => {
+  return (
+    <div className="flex flex-col text-sm mt-8">
       <div className="fade-in-effect grow">
-        <div className="mt-1 text-base grow flex pl-2 pb-1 border-b-2 border-blue-500 font-bold">
+        <div className="flex items-center pb-2 border-b-2 border-blue-500 font-bold text-base text-gray-800">
           Experience
           <div className="flex justify-end grow">
-            <GrUserExpert className="text-lg mr-2" />
+            <GrUserExpert className="text-lg mr-1" />
           </div>
         </div>
 
-        <div className="flex flex-col my-1 px-2">
-          <div
-            ref={ref1}
-            className={`flex flex-col transition-all duration-700 ease-in-out ${
-              inView1
-                ? "transform translate-x-0 opacity-100"
-                : "transform translate-x-[-200px] opacity-0"
-            }`}
-          >
-            <div className="flex mt-1">
-              <p className="font-semibold">Systems Support Engineer</p>
-              <div className="flex justify-end grow">
-                <p className="italic text-slate-400">
-                  Tata Consultancy Services
-                </p>
-                <img
-                  className="h-[20px] w-[20px] rounded-xl ml-1"
-                  src={tcslogo}
-                ></img>
-              </div>
-            </div>
-            <div className="flex justify-start text-sm text-slate-400">
-              <p className="text-blue-400"> February 2026 - current</p>
-              <div className="flex justify-end grow">
-                <p>Jacksonville, FL</p>
-              </div>
-            </div>
-            <ul className="list-disc pl-10 pr-5 mt-2">
-              <li className="text-sm mt-1">
-                Provided enterprise IT operations support for The Winn-Dixie
-                Company (TWDC).
-              </li>
-              <li className="text-sm mt-0.5">
-                Transitioned from in-house TWDC IT to TCS managed services
-                model.
-              </li>
-              <li className="text-sm mt-0.5">
-                Leading ongoing knowledge transfer to train offshore IT
-                Operations team on processes, monitoring, incident response
-                procedures, and all other day-to-day duties.
-              </li>
-            </ul>
+        <JobEntry
+          title="Systems Support Engineer"
+          company="Tata Consultancy Services"
+          logo={tcslogo}
+          date="February 2026 – Present"
+          location="Jacksonville, FL"
+        >
+          <li>
+            Serving as the sole on-site subject matter expert responsible for transitioning
+            enterprise IT operations to a 12-person offshore team, bridging institutional
+            knowledge built across 3+ years of supporting Winn-Dixie's production environment.
+          </li>
+          <li>
+            Authored 25+ in-depth operational runbooks covering incident response procedures,
+            scheduling workflows, and recurring daily, weekly, and monthly tasks; enabling
+            offshore team self-sufficiency and reducing escalations.
+          </li>
+          <li>
+            Led knowledge transfer sessions covering Stonebranch workload automation, monitoring
+            systems, escalation procedures, and cross-team coordination protocols.
+          </li>
+        </JobEntry>
 
-            <div className="flex mt-4">
-              <p className="font-semibold">IT Datacenter Operator II</p>
-              <div className="flex justify-end grow">
-                <p className="italic text-slate-400">Winn Dixie</p>
-                <img
-                  className="h-[20px] w-[20px] rounded-xl ml-1"
-                  src={logo}
-                ></img>
-              </div>
-            </div>
-            <div className="flex justify-start text-sm text-slate-400">
-              <p className="text-blue-400">January 2023 - February 2026</p>
-              <div className="flex justify-end grow">
-                <p>Jacksonville, FL</p>
-              </div>
-            </div>
-            <ul className="list-disc pl-10 pr-5 mt-2">
-              <li className="px-1 py-0.5">
-                My IT Operations team provides 24/7 support for enterprise
-                systems, ensuring uptime and reliability of mission-critical
-                processes and infrastructure.
-              </li>
-              <li className="px-1 py-0.5">
-                Monitor, troubleshoot, escalate and resolve failures in
-                Stonebranch job scheduling, supporting 15,000+ daily processes
-                that drive POS, pricing, file transfers, merchandising, supply
-                chain, and store operations.
-              </li>
-              <li className="px-1 py-0.5">
-                Investigate job failures, identify root cause, re-run workflows
-                when appropriate, and create/route incident tickets to
-                engineering teams for escalation when code, data, or
-                infrastructure issues are detected.
-              </li>
-              <li className="px-1 py-0.5">
-                Create, optimize, and respond to alerts from Dynatrace, Azure
-                Monitor, IR360, and internal monitoring systems to ensure uptime
-                of enterprise applications including websites, APIs, function
-                apps, databases, and backend services.
-              </li>
-              <li className="px-1 py-0.5">
-                Utilize log analysis and system utilities to validate service
-                availability and support troubleshooting efforts
-              </li>
-              <li>
-                Develop Python automation tools to recover FTE/file-transfer
-                jobs, troubleshoot Kubernetes-hosted store containers, and
-                accelerate remediation of infrastructure issues across 300+
-                store environments.
-              </li>
-              <li>
-                Participate in disaster recovery exercises, validating system
-                recoverability and ensuring business continuity for retail
-                operations.
-              </li>
-              <li>
-                Document procedures, incident resolutions, and repeatable fixes
-                to improve team knowledge and reduce time-to-resolution on
-                recurring issues.
-              </li>
-            </ul>
+        <JobEntry
+          title="IT Datacenter Operator II"
+          company="The Winn-Dixie Company"
+          logo={logo}
+          date="January 2023 – February 2026"
+          location="Jacksonville, FL"
+        >
+          <li>
+            Managed end-to-end health of enterprise batch workloads in Stonebranch, spanning
+            z/OS JCL jobs, Azure data pipelines, DataStage ETL processes, PowerShell scripts,
+            and Windows batch; supporting 15,000+ automated processes daily that drive POS,
+            pricing, merchandising, supply chain, and store operations.
+          </li>
+          <li>
+            Investigated and resolved complex workload failures by identifying root causes
+            including scheduling conflicts, out-of-order dependencies, late-running jobs, and
+            data or infrastructure issues; escalating to application engineering teams with full
+            context to accelerate remediation.
+          </li>
+          <li>
+            Resolved 3,750+ incidents over the role tenure, maintaining{" "}
+            <span className="font-medium text-gray-700">96.5% SLA compliance</span> — above the
+            12-person team average — while operating in a senior capacity focused on complex
+            escalations.
+          </li>
+          <li>
+            Served as de facto shift lead and senior resource despite under two years of tenure:
+            coached junior analysts on incident response, delegated routine tickets to develop
+            newer staff, and personally handled advanced cross-platform failures escalated from
+            the team.
+          </li>
+          <li>
+            Designed and deployed 1,100+ monitoring alerts for credit card processing and backup
+            CC/DD devices across the retail store fleet, enabling proactive "store down" detection
+            and resolution before store opening hours.
+          </li>
+          <li>
+            Built 200+ Azure Monitor and Application Insights alerts with embedded escalation
+            paths and resolution instructions to ensure uptime of cloud-hosted applications, APIs,
+            function apps, and databases.
+          </li>
+          <li>
+            Developed Python automation tools to troubleshoot and repair Kubernetes store
+            clusters, scripting pod rebuilds, log retrieval, and file transfers across 300+ store
+            servers; significantly reducing manual recovery time.
+          </li>
+          <li>
+            Documented incident resolutions, procedures, and repeatable fixes to build team
+            knowledge and reduce time-to-resolution on recurring issues.
+          </li>
+        </JobEntry>
 
-            <div className="flex mt-4">
-              <p className="font-semibold">
-                IBM Global Accelerator Apprenticeship MSA Program
-              </p>
-              <div className="flex justify-end grow">
-                <p className="italic text-slate-400">IBM | Winn Dixie</p>
-                <img
-                  className="h-[20px] w-[20px] rounded-xl ml-1"
-                  src={logo}
-                ></img>
-              </div>
-            </div>
-            <div className="flex justify-start text-sm text-slate-400">
-              <p className="text-blue-400"> January 2025 - January 2026</p>
-              <div className="flex justify-end grow">
-                <p>Jacksonville, FL</p>
-              </div>
-            </div>
-            <ul className="list-disc pl-10 pr-5 mt-2">
-              <li className="text-sm mt-1">
-                Mainframe system administrator apprenticeship program taught by
-                IBM subject matter experts.
-              </li>
-              <li className="text-sm mt-0.5">
-                Gained hands-on experience operating and maintaining
-                Winn-Dixie’s z/OS mainframe environment.
-              </li>
-              <li className="text-sm mt-0.5">
-                Wrote and executed JCL, navigated the mainframe using ISPF, and
-                managed datasets and utilities.
-              </li>
-              <li className="text-sm mt-0.5">
-                Troubleshot and resolved countless failed batch jobs.
-              </li>
-              <li className="text-sm mt-0.5">
-                Conducted identity and access management (IAM) tasks using TSO
-                commands.
-              </li>
-            </ul>
-            {/* <p className="mt-5">
-              <span className="text-blue-400">Job Skills: </span> Automation,
-              Azure/AzureDevOps, Stonebranch, Python Scripting, SolarWinds,
-              VMware, Kubernetes, AxwayB2BI, Active Directory management, Change
-              Management, Dynatrace, MQAttach
-            </p> */}
-          </div>
-
-          {/* <div
-            ref={ref1}
-            className={`flex flex-col transition-all duration-700 ease-in-out ${
-              inView1
-                ? "transform translate-x-0 opacity-100"
-                : "transform translate-x-[200px] opacity-0"
-            }`}
-          >
-            <div className="flex mt-5">
-              <p>Customer Service Associate</p>
-              <div className="flex justify-end grow">
-                <p className="italic text-slate-400">Winn-Dixie</p>
-                <img
-                  className="h-[20px] w-[20px] rounded-xl ml-1"
-                  src={logo}
-                ></img>
-              </div>
-            </div>
-            <div className="flex justify-start text-sm text-slate-400">
-              <p className="text-blue-400"> July 2020 - June 2022</p>
-              <div className="flex justify-end grow">
-                <p>Jacksonville, FL</p>
-              </div>
-            </div>
-            <ul className="list-disc pl-10 pr-5 mt-2">
-              <li className="text-sm mt-1">
-                Provided exceptional customer service by greeting customers,
-                assisting with inquiries, and resolving issues promptly and
-                professionally.
-              </li>
-              <li className="text-sm mt-0.5">
-                Received positive feedback from customers and supervisors for
-                outstanding service and attention to detail.
-              </li>
-            </ul>
-          </div> */}
-        </div>
+        <JobEntry
+          title="Mainframe Systems Apprentice (Concurrent Program)"
+          company="IBM | The Winn-Dixie Company"
+          logo={logo}
+          date="January 2025 – January 2026"
+          location="Jacksonville, FL"
+        >
+          <li>
+            Completed IBM-led mainframe apprenticeship concurrent with full-time IT Operator
+            role, gaining hands-on experience operating Winn-Dixie's z/OS production environment.
+          </li>
+          <li>
+            Wrote and executed JCL, navigated ISPF, managed datasets and utilities, and
+            troubleshot failed batch jobs in a live mainframe environment.
+          </li>
+          <li>
+            Conducted identity and access management (IAM) tasks using TSO commands and developed
+            practical skills in CICS transaction processing.
+          </li>
+        </JobEntry>
       </div>
     </div>
   );

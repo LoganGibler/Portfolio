@@ -1,110 +1,41 @@
-import React, { useState } from "react";
-import { CgDanger } from "react-icons/cg";
-import { FaCheckCircle } from "react-icons/fa";
-import { FaArrowAltCircleUp } from "react-icons/fa";
+import React from "react";
+import { FaLinkedin } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
 
 const ContactMe = () => {
-  const [email, setEmail] = useState("");
-  const [subject, setSubject] = useState("");
-  const [message, setMessage] = useState("");
-  const [error, setError] = useState(false);
-  const [success, setSuccess] = useState(false);
   return (
-    <div className="mx-2 mt-10 flex justify-center">
-      <p className="font-bold">
-        Please contact me via Linkedin Messaging or email for inquiries.{" "}
+    <div className="flex flex-col items-center text-center mt-12 mb-4 py-10 px-6 rounded-2xl bg-gradient-to-br from-blue-50 to-white border border-blue-100">
+      <h2 className="text-lg font-bold text-gray-900 tracking-tight">Let's Connect</h2>
+      <p className="text-sm text-gray-500 mt-2 max-w-sm leading-relaxed">
+        Open to new opportunities and always happy to chat. Reach out via LinkedIn or email — I'll get back to you promptly.
       </p>
+
+      <div className="flex flex-wrap justify-center gap-3 mt-6">
+        <a
+          href="https://www.linkedin.com/in/logan-gibler"
+          target="_blank"
+          rel="noreferrer"
+          className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-lg text-sm font-medium transition-colors shadow-sm"
+        >
+          <FaLinkedin className="text-base" />
+          LinkedIn
+        </a>
+        <a
+          href="mailto:Logan.Gibler5@gmail.com"
+          className="flex items-center gap-2 border border-gray-300 hover:bg-gray-50 text-gray-700 px-5 py-2.5 rounded-lg text-sm font-medium transition-colors"
+        >
+          <MdEmail className="text-base" />
+          Email Me
+        </a>
+      </div>
+
+      <button
+        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        className="mt-8 text-xs text-gray-400 hover:text-blue-500 transition-colors flex items-center gap-1.5"
+      >
+        ↑ Back to top
+      </button>
     </div>
-    // <div className="flex flex-col justify-center mt-[5rem]">
-    //   <div className="flex justify-center">
-    //     <form
-    //       className="flex flex-col justify-center grow"
-    //       onSubmit={(e) => {
-    //         e.preventDefault();
-    //         try {
-    //           if (
-    //             email.length < 1 ||
-    //             subject.length < 1 ||
-    //             message.length < 1
-    //           ) {
-    //             setError(true);
-    //             setSuccess(false);
-    //             // api call to node.js mailer function here
-    //             return;
-    //           }
-    //           setSuccess(true);
-    //           setError(false);
-    //           setEmail("");
-    //           setSubject("");
-    //           setMessage("");
-    //         } catch (error) {
-    //           setError(true);
-    //           setSuccess(false);
-    //         }
-    //       }}
-    //     >
-    //       <h1 className="font-bold">Contact Me</h1>
-    //       <input
-    //         placeholder="Your email...."
-    //         className="border-2 rounded-md px-1 py-0.5 mt-2"
-    //         type="email"
-    //         onChange={(e) => setEmail(e.target.value)}
-    //       ></input>
-    //       <input
-    //         className="border-2 rounded-md px-1 mt-2 py-0.5"
-    //         placeholder="Subject..."
-    //         type="text"
-    //         onChange={(e) => setSubject(e.target.value)}
-    //       ></input>
-    //       <textarea
-    //         type="text"
-    //         placeholder="Your message...."
-    //         className="border-2 rounded-md px-1 mt-2 py-0.5 h-[100px]"
-    //         onChange={(e) => setMessage(e.target.value)}
-    //       ></textarea>
-    //       <button className="border-2 mt-2 bg-blue-500 border-blue-500 rounded-md text-white">
-    //         Send Message
-    //       </button>
-    //       {success ? (
-    //         <div className="text-sm flex">
-    //           <FaCheckCircle className="text-green-500 text-4xl" />
-    //           <p className="mt-2">
-    //             Thank you for sending me a message. I will reach back out to you
-    //             as soon as I am available. For a fast response, please DM me on
-    //             LinkedIn.
-    //           </p>
-    //         </div>
-    //       ) : null}
-    //       {error ? (
-    //         <div className="text-black text-sm flex mt-2">
-    //           <CgDanger className="text-red-600 text-3xl" />
-    //           <p className="mt-1">
-    //             There was an error sending your message. Please make sure to
-    //             fill out all input boxes.
-    //           </p>
-    //         </div>
-    //       ) : null}
-    //     </form>
-    //   </div>
-
-    //   <div
-    //     className="flex flex-col justify-center mt-[2rem] text-sm"
-    //     onClick={() => {
-    //       window.scrollTo({ top: 0, behavior: "smooth" });
-    //     }}
-    //   >
-    //     <div>
-    //       <button className="mt-2 border-2 rounded-md px-3 border-blue-500 text-white bg-blue-500">
-    //         Back to top
-    //       </button>
-    //     </div>
-
-    //     <div className="flex justify-center">
-    //       {" "}
-    //       <FaArrowAltCircleUp className="mt-1 text-blue-500" />
-    //     </div>
-    //   </div>
-    // </div>
   );
 };
 

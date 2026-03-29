@@ -1,87 +1,34 @@
 import React from "react";
 
+const NAV_LINKS = [
+  { label: "Home", scrollTop: 0 },
+  { label: "Education", scrollTop: 450 },
+  { label: "Experience", scrollTop: 870 },
+  { label: "Projects", scrollTop: 1550 },
+  { label: "Skills", scrollTop: 2450 },
+  { label: "Contact", scrollTop: 4000 },
+];
+
 const Navigation = ({ activeLink, setActiveLink }) => {
   return (
-    <div className="flex text-black justify-center">
-      <div className="flex justify-center font-semibold">
-        <p
-          onClick={() => {
-            setActiveLink("Home");
-            window.scrollTo({ top: 0, behavior: "smooth" });
-          }}
-          className={`mx-2 ${
-            activeLink === "Home"
-              ? "text-blue-500 hover:cursor-pointer"
-              : "text-black hover:cursor-pointer"
-          }`}
-        >
-          Home
-        </p>
-        <p
-          onClick={() => {
-            setActiveLink("Education");
-            window.scrollTo({ top: 400, behavior: "smooth" });
-          }}
-          className={`mx-2 ${
-            activeLink === "Education"
-              ? "text-blue-500 hover:cursor-pointer"
-              : "text-black hover:cursor-pointer"
-          }`}
-        >
-          Education
-        </p>
-        <p
-          onClick={() => {
-            setActiveLink("Experience");
-            window.scrollTo({ top: 820, behavior: "smooth" });
-          }}
-          className={`mx-2 ${
-            activeLink === "Experience"
-              ? "text-blue-500 hover:cursor-pointer"
-              : "text-black hover:cursor-pointer"
-          }`}
-        >
-          Experience
-        </p>
-        <p
-          onClick={() => {
-            setActiveLink("Projects");
-            window.scrollTo({ top: 1500, behavior: "smooth" });
-          }}
-          className={`mx-2 ${
-            activeLink === "Projects"
-              ? "text-blue-500 hover:cursor-pointer"
-              : "text-black hover:cursor-pointer"
-          }`}
-        >
-          Projects
-        </p>
-        <p
-          onClick={() => {
-            setActiveLink("Skills");
-            window.scrollTo({ top: 2400, behavior: "smooth" });
-          }}
-          className={`mx-2 ${
-            activeLink === "Skills"
-              ? "text-blue-500 hover:cursor-pointer"
-              : "text-black hover:cursor-pointer"
-          }`}
-        >
-          Skills
-        </p>
-        <p
-          onClick={() => {
-            setActiveLink("Contact");
-            window.scrollTo({ top: 4000, behavior: "smooth" });
-          }}
-          className={`mx-2 ${
-            activeLink === "Contact"
-              ? "text-blue-500 hover:cursor-pointer"
-              : "text-black hover:cursor-pointer"
-          }`}
-        >
-          Contact
-        </p>
+    <div className="flex justify-center py-2.5">
+      <div className="flex gap-0.5 font-medium text-sm">
+        {NAV_LINKS.map(({ label, scrollTop }) => (
+          <button
+            key={label}
+            onClick={() => {
+              setActiveLink(label);
+              window.scrollTo({ top: scrollTop, behavior: "smooth" });
+            }}
+            className={`px-3 py-1.5 rounded-full transition-all duration-200 ${
+              activeLink === label
+                ? "bg-blue-500 text-white shadow-sm"
+                : "text-gray-600 hover:text-gray-900 hover:bg-gray-100"
+            }`}
+          >
+            {label}
+          </button>
+        ))}
       </div>
     </div>
   );

@@ -1,6 +1,5 @@
 import React from "react";
 import { PiGraduationCap } from "react-icons/pi";
-import { FaArrowAltCircleDown } from "react-icons/fa";
 import { useInView } from "react-intersection-observer";
 
 const Education = () => {
@@ -14,71 +13,64 @@ const Education = () => {
   });
 
   return (
-    <div className="flex flex-col fade-in-effect mt-[1rem]">
+    <div className="flex flex-col fade-in-effect mt-8">
       <div className="slide-in-effect flex flex-col">
-        <div className="mt-1 flex text-base grow pl-2 pb-1 border-b-2 border-blue-500 font-bold">
+        <div className="flex items-center pb-2 border-b-2 border-blue-500 font-bold text-base text-gray-800">
           Education
           <div className="flex justify-end grow">
-            <PiGraduationCap className="text-xl mr-2 mt-[1px]" />
+            <PiGraduationCap className="text-xl mr-1" />
           </div>
         </div>
+
         <div
           ref={ref1}
-          className={`flex flex-col text-sm px-2 mt-2 pb-7 transition-all duration-700 ease-in-out ${
+          className={`mt-4 pl-3 border-l-2 border-blue-100 transition-all duration-700 ease-in-out ${
             inView1
               ? "transform translate-x-0 opacity-100"
               : "transform translate-x-[-200px] opacity-0"
           }`}
         >
-          <div className="flex">
-            <p className=" font-semibold">Western Governors University</p>
-            <div className="flex justify-end grow">
-              <p className="italic text-slate-400">Salt Lake City, Utah</p>
-            </div>
+          <div className="flex items-baseline justify-between flex-wrap gap-1">
+            <p className="font-semibold text-gray-800 text-sm">
+              Western Governors University
+            </p>
+            <p className="text-slate-400 text-xs">October 2025</p>
           </div>
-          <div className="flex text-sm">
-            <p className="text-blue-400">B.S in Software Engineering</p>
-            <div className="flex justify-end grow">
-              <p className="text-slate-400">October 2025</p>
-            </div>
-          </div>
-          <li className="text-sm mt-4">
-            Studies focused on scripting, programming, web development, mobile
-            application development, User experience design, software quality
-            assurance
-          </li>
-          <li className="text-sm mt-2">
-            <span className="text-blue-500">Relevant courses-</span> Data
-            Structures and Algorithms, Advanced Data Management, Front-end Web
-            Development, User Interface Design, User Experience Design, Backend
-            Programming
-          </li>
+          <p className="text-blue-500 text-xs font-medium mt-0.5">
+            B.S. in Software Engineering
+          </p>
+          <p className="text-xs text-gray-500 mt-2 leading-relaxed">
+            <span className="font-medium text-gray-600">Coursework: </span>
+            Programming in Python, Cloud Foundations, User Interface Design,
+            User Experience Design, Hardware &amp; Operating Systems, Frontend Web
+            Development, Data Structures &amp; Algorithms, Advanced Data Management,
+            Data Management for Applications, JavaScript Programming, Java
+            Fundamentals, Advanced Java, Java Frameworks, Backend Programming
+          </p>
         </div>
 
         <div
           ref={ref2}
-          className={`flex flex-col text-sm px-2 mt-2 pb-7 transition-all duration-700 ease-in-out ${
+          className={`mt-5 pl-3 border-l-2 border-blue-100 transition-all duration-700 ease-in-out ${
             inView2
               ? "transform translate-x-0 opacity-100"
               : "transform translate-x-[200px] opacity-0"
           }`}
         >
-          <div className="flex whitespace-nowrap font-semibold">
-            <p>Fullstack Academy Cybersecurity Bootcamp</p>
+          <div className="flex items-baseline justify-between flex-wrap gap-1">
+            <p className="font-semibold text-gray-800 text-sm">
+              Fullstack Academy at UNF
+            </p>
+            <p className="text-slate-400 text-xs">Jan 2022 – Jul 2022</p>
           </div>
-          <div className="flex whitespace-nowrap text-sm">
-            <p className="text-blue-400">Cybersecurity Certificate, UNF</p>
-            <div className="flex justify-end grow">
-              <p className="text-slate-400">Jan 2022 - July 2022</p>
-            </div>
-          </div>
-          <li className="text-sm mt-2">
-            Throughout the program, I upskilled in industry-leading tools,
-            techniques, and procedures, including Log Analysis, Reconnaissance,
-            IPS/IDS, Packet Analysis, Python/Bash Scripting, Exploitation,
-            Indicators of Compromise, Detection and Response, NIST Framework,
-            MITRE ATT&CK Framework, and Reporting.
-          </li>
+          <p className="text-blue-500 text-xs font-medium mt-0.5">
+            Certificate, Cybersecurity
+          </p>
+          <p className="text-xs text-gray-500 mt-2 leading-relaxed">
+            <span className="font-medium text-gray-600">Coursework: </span>
+            Log Analysis, Packet Analysis, IPS/IDS, Python/Bash Scripting,
+            Exploitation, NIST Framework, MITRE ATT&amp;CK
+          </p>
         </div>
       </div>
     </div>

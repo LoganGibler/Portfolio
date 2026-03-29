@@ -18,10 +18,16 @@ function App() {
 
   const [activeLink, setActiveLink] = useState("Home");
   return (
-    <main className="flex flex-col justify-center">
-      <div className="flex justify-center">
-        <div className="max-w-[700px]">
-          <Navigation activeLink={activeLink} setActiveLink={setActiveLink} />
+    <main className="flex flex-col min-h-screen">
+      <div className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200 shadow-sm">
+        <div className="flex justify-center">
+          <div className="w-full max-w-[700px] px-4">
+            <Navigation activeLink={activeLink} setActiveLink={setActiveLink} />
+          </div>
+        </div>
+      </div>
+      <div className="flex justify-center pb-16">
+        <div className="w-full max-w-[700px] px-4">
           <Header />
           <Education />
           <Experience />

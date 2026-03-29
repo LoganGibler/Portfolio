@@ -1,54 +1,39 @@
 import React from "react";
 import { PiCertificateLight } from "react-icons/pi";
-import { FaArrowAltCircleDown } from "react-icons/fa";
+
+const CERTS = [
+  { name: "CompTIA Security+", date: "Aug 2022", expiry: "Feb 2029" },
+  { name: "CompTIA CySA+", date: "Feb 2023", expiry: "Feb 2029" },
+  { name: "CompTIA Pentest+", date: "Jun 2023", expiry: "Jun 2026" },
+  { name: "AWS Cloud Practitioner", date: "May 2024", expiry: "May 2027" },
+  { name: "CompTIA Project+", date: "Jun 2024", expiry: "Never" },
+  { name: "Axelos ITIL Foundations", date: "Jun 2024", expiry: "Never" },
+];
 
 const Certs = () => {
   return (
-    <div className="slide-in-effect mt-[4rem]">
+    <div className="mt-8">
       <div className="fade-in-effect">
-        <div className="mt-10 flex pb-1 border-b-2 border-blue-500 font-bold pl-2">
+        <div className="flex items-center pb-2 border-b-2 border-blue-500 font-bold text-base text-gray-800">
           Certifications
           <div className="flex justify-end grow">
-            <PiCertificateLight className="text-2xl mr-2" />
+            <PiCertificateLight className="text-2xl mr-1" />
           </div>
         </div>
-        <div className="flex flex-col text-sm px-2">
-          <div className="flex mt-2">
-            <p>CompTIA Security+</p>
-            <div className="flex justify-end grow text-slate-400">
-              Aug 2022 – exp: Feb 2029
+
+        <div className="mt-3 divide-y divide-gray-100">
+          {CERTS.map((cert) => (
+            <div key={cert.name} className="flex items-center justify-between py-2.5">
+              <div className="flex items-center gap-2.5">
+                <div className="w-2 h-2 rounded-full bg-blue-400 flex-shrink-0" />
+                <span className="text-sm font-medium text-gray-800">{cert.name}</span>
+              </div>
+              <span className="text-xs text-gray-400 ml-3 whitespace-nowrap">
+                {cert.date}
+                {cert.expiry !== "Never" ? ` – exp: ${cert.expiry}` : " · No expiry"}
+              </span>
             </div>
-          </div>
-          <div className="flex mt-1">
-            <p>CompTIA CySA+</p>
-            <div className="flex justify-end grow text-slate-400">
-              Feb 2023 - exp: Feb 2029
-            </div>
-          </div>
-          <div className="flex mt-1">
-            <p>CompTIA Pentest+</p>
-            <div className="flex justify-end grow text-slate-400">
-              June 2023 - exp: June 2026
-            </div>
-          </div>
-          <div className="flex mt-1">
-            <p className="whitespace-nowrap">AWS Cloud Practioner</p>
-            <div className="flex justify-end grow text-slate-400">
-              May 2024 - exp: May 2027
-            </div>
-          </div>
-          <div className="flex mt-1">
-            <p className="whitespace-nowrap">CompTIA Project+</p>
-            <div className="flex justify-end grow text-slate-400">
-              June 2024 - exp: Never
-            </div>
-          </div>
-          <div className="flex mt-1">
-            <p className="whitespace-nowrap">Axelos ITIL Foundations</p>
-            <div className="flex justify-end grow text-slate-400">
-              June 2024 - exp: Never
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </div>
