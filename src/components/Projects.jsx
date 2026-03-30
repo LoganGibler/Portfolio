@@ -148,9 +148,9 @@ const Projects = () => {
           subtitle="HackTheBox Guide Platform"
           date="Nov 2023"
           imageUrl={WAWimage}
-          imageHref="https://webappwarfare.com"
+          imageHref="https://webappwarfare.netlify.app/"
           description="Cybersecurity learning platform built with React, Node.js, MongoDB, and Firebase. Features role-based permissions, a content moderation workflow, guide approval system, and the ability to upload screenshots with writeups. All public guides are legitimate HackTheBox writeups published by me."
-          links={[{ href: "https://webappwarfare.com" }]}
+          links={[{ href: "https://webappwarfare.netlify.app/" }]}
         />
 
         <ProjectCard
