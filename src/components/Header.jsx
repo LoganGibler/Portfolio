@@ -19,7 +19,7 @@ const Header = () => {
           <span className="text-blue-500">Hey!</span> I'm Logan.
         </h1>
         <p className="text-gray-500 text-sm mt-1 font-medium">
-          Batch Operations &amp; Workload Automation Engineer
+          IT Operations Engineer | DevSecOps Focused
         </p>
 
         <p className="mt-4 text-sm text-gray-600 text-center max-w-md leading-relaxed px-2">
